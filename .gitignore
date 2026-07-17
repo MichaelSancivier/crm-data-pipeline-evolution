@@ -1,0 +1,27 @@
+# === Data & Databases ===
+*.csv
+*.xlsx
+*.json
+!make-scenario.json
+*.sql.bak
+
+# === Virtual Environments & Python ===
+venv/
+env/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# === Environment Variables & Credentials ===
+.env
+*.pem
+*.pkcs12
+*.key
+*.p12
+service-account*.json
+
+# === OS & IDE Files ===
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

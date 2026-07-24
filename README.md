@@ -1,141 +1,80 @@
-# 🚀 MASTER PLAN: REVOPS ECOSYSTEM & AI AGENTIC HUB (V9)
-### Enterprise Strategy: Predictive Intelligence (MLOps), Event-Driven Architecture, and State Consolidation (Firestore)
+# 🚀 MASTER PLAN: REVOPS ECOSYSTEM & DUAL AI ARCHITECTURE (V9)
+**Enterprise Strategy: Legacy Migration, MLOps, Generative AI, and Privacy by Design**
 
-![Google Cloud Platform](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
-![BigQuery](https://img.shields.io/badge/BigQuery-669DF6?style=for-the-badge&logo=google-bigquery&logoColor=white)
+![Google Cloud Platform](https://img.shields.io/badge/GCP-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
 ![Python 3.10](https://img.shields.io/badge/Python_3.10-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Make](https://img.shields.io/badge/Make.com-6D00CC?style=for-the-badge&logo=make&logoColor=white)
+![Make](https://img.shields.io/badge/Make-6D00CC?style=for-the-badge&logo=make&logoColor=white)
+![Gemini](https://img.shields.io/badge/Gemini_AI-8E75B2?style=for-the-badge&logo=googlebard&logoColor=white)
 ![HubSpot CRM](https://img.shields.io/badge/HubSpot_CRM-FF7A59?style=for-the-badge&logo=hubspot&logoColor=white)
-![License MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![BigQuery](https://img.shields.io/badge/BigQuery-669DF6?style=for-the-badge&logo=googlecloud&logoColor=white)
 
 **PROFILE:** Michael Sancivier — Technical Product Owner & RevOps Process Specialist  
-**CORE SKILLS:** Scrum | Six Sigma | FinOps Cloud Architecture | Data Pipeline Engineering | API Orchestration
+**CORE SKILLS:** Scrum | Six Sigma | FinOps Cloud Architecture | Data Pipeline Engineering | AI Orchestration
 
 ---
 
-## 📊 Data Impact Summary (Enterprise Optimization Metrics)
+## 📊 1. Data Impact & Enterprise Metrics
 
-| Operational Metric | Real Volume / Impact |
+| Strategic Dimension | Real Volume / Impact |
 | :--- | :--- |
-| **Raw Candidates (Ingested Leads)** | 132,248 records |
-| **Raw Students (Exam History)** | 15,356 records |
-| **Total Raw Volume Processed** | **147,604 records** |
-| **Consolidated Unique Entities (Target: Brazil)** | **11,600 records** |
-| **Noise Reduction Rate (Geofencing & Deduplication)** | **~92% optimization** |
-| **Structural Operating Cost (Make Orchestration)** | **$0.00 USD** (1 single operation per completed cycle) |
+| **Raw Legacy Volume Processed** | 147,604 records cleaned from the legacy system[cite: 1]. |
+| **Data Minimization (GDPR/LGPD)** | 11,600 unique entities recovered (~92% noise reduction)[cite: 1]. |
+| **Dual AI Architecture** | **MLOps:** Social Media origin prediction. **GenAI:** Exam evaluation. |
+| **Structural Operating Cost** | **$0.00 USD** (GCP Serverless + Make Smart Routing)[cite: 1]. |
 
 ---
 
-## 1. 🎯 Strategic Vision: From MVP to Full Enterprise Ecosystem
+## 🎯 2. The Business Challenge: Migration & Automation
+This repository documents the architectural evolution of a RevOps ecosystem that previously collapsed under the weight of **147,604 raw records**. 
 
-This repository documents the evolution to **Version 9** of a previously manual operational process into an automated, event-driven enterprise architecture governed by Predictive Artificial Intelligence (**MLOps**).
+The business required a two-front solution:
+1. **The Past (Legacy Migration):** Migrate 11,600 historical records to a new CRM (HubSpot)[cite: 1]. However, these records lacked critical marketing attribution data (Social Media Origin).
+2. **The Future (New Leads):** Automate the qualitative evaluation of new candidates taking admission exams in Google Classroom.
 
-Designed under Continuous Improvement principles (**Six Sigma**) and Privacy by Design (**LGPD/GDPR**), this ecosystem unifies data silos and optimizes financial resources (**FinOps**). The core architectural milestone of this version is establishing **Google Cloud Platform (GCP)** as the central ingestion engine, solving end-to-end data traceability, isolating cross-regional markets (geofencing Brazil vs. Argentina datasets), and completely eliminating operational blind spots.
-
----
-
-## 🧠 AI-Native Engineering & Orchestration Paradigm
-
-This project was architected and deployed by leveraging Generative AI as an active engineering copilot. Rather than manually writing traditional boilerplate code line-by-line, AI tools were directed to generate, optimize, and stress-test SQL multi-tier transformations, Python serverless microservices, and API integration payloads under a strict System Architecture and Product Owner vision. 
-
-This methodology bridges business strategy with technical execution, accelerating delivery cycles while maintaining total architectural control, code governance, and FinOps efficiency.
+Under **Six Sigma** and **Privacy by Design** principles, I architected a **Dual AI Event-Driven System** to solve both challenges at $0.00 infrastructure cost[cite: 1].
 
 ---
 
-## 2. ⚡ FinOps Architecture: Cloud State Machine (GCP) & Dual Ingestion Reconciliation
+## 🧠 3. Dual AI Architecture: MLOps & Generative AI
 
-To ensure enterprise scalability without triggering software licensing costs or overloading transactional webhooks, the architecture integrates **Google Cloud Pub/Sub** and **Cloud Firestore** as an elastic cloud state machine.
+### 🔹 3.1 Resolving the Past: MLOps Router & Legacy Migration
+To rescue the historical data attribution, I engineered a Predictive AI workflow:
+* **MLOps Training:** Trained a classification model (`Scikit-Learn`) in **Google Colab** using the clean dataset to predict missing Social Media channels.
+* **Serverless GCP:** Packaged the `.pkl` artifacts into a **Google Cloud Function** (Python 3.10)[cite: 1].
+* **Make Smart Router:** Configured a webhook router. If a legacy record is complete, it takes the **"Happy Path"** to the CRM. If the Social Media origin is missing, it takes the **"AI Path"**, triggering the GCP microservice to predict the channel in <2s before injecting the enriched profile into HubSpot.
 
-The workflow removes third-party dependencies for early state management, enabling seamless reconciliation using the **candidate's email address** as the universal primary key:
-
-* 📩 **Ingestion Event (Lead Origin):** Newly registered leads land directly in GCP, creating an initial profile document in **Firestore** (`status: Pending Evaluation`) at $0.00 cost.
-* 📝 **Evaluation Event (Cross-Check):** Upon completing an exam in **Google Classroom**, Pub/Sub triggers a Cloud Function that executes a real-time cross-check in Firestore, using the candidate's **email** to aggregate exam scores into the existing profile.
-* 🚀 **Purified Trigger (Webhook):** Once the State Machine confirms a fully qualified profile, it emits **a single purified HTTP trigger to Make**, orchestrating the final sync into **HubSpot CRM** and **BigQuery** without redundant intermediate runs.
-
----
-
-## 🏗️ System Architecture Diagram
-
-```mermaid
-graph TD
-    %% Ingestion Layer
-    subgraph GCP Ingestion & State Machine
-        A[Raw Lead Registration] -->|Ingestion Event| B[(Google Cloud Firestore)]
-        C[Google Classroom Exam Submission] -->|Pub/Sub Event| D[Cloud Function: Cross-Check]
-        D -->|Email Primary Key Match| B
-    end
-
-    %% Event-Driven Trigger
-    B -->|Purified State Completed| E[Make Orchestrator]
-
-    %% AI & Processing Layer
-    subgraph Agentic & Predictive AI Layer
-        E -->|Extract Prompt Governance| F[Google Docs / Drive]
-        E -->|Qualitative Profile Analysis| G[Vertex AI / Gemini 2.5 Flash]
-        E -->|Data Sanitization| H[JSON Parser]
-        E -->|Predict Missing Channel| I[Python ML Cloud Function]
-    end
-
-    %% Enterprise Outputs
-    subgraph Production CRM & Data Warehouse
-        H -->|Update Contact & AI Notes| J[HubSpot CRM]
-        H -->|Real-time Streaming Insert| K[(Google BigQuery)]
-        J -->|Native Sync| L[Looker Studio BI Dashboards]
-        K -->|Native Sync| L
-    end
-```
----
-
-## 3. 🗺️ Development Roadmap by Milestones (V9)
-
-### 🔹 Milestone 1: Data Engineering & Geographic Market Isolation (Zoho Analytics ETL)
-* **Situation:** The legacy Data Warehouse (Zoho Analytics) exhibited high operational fragmentation, holding 147,604 raw records mixed between candidate leads (132,248) and evaluated student histories (15,356), with overlapping data across Latin American markets (including Brazil and Argentina).
-* **Task:** Design and execute an Enterprise-grade ETL pipeline (*Staging, Transformation, Production*) to clean the database, isolate the Brazilian market via **Geofencing** logic, and consolidate high-fidelity unique entities for ML model training.
-* **Action:** Refactored complex SQL queries by applying strict relational joins and conditional business logic to deduplicate, unify candidate history, and drop incomplete or out-of-scope regional records.
-* **Result:** Compressed data volume from **147,604 raw rows to 11,600 unique, validated entities**, achieving a **92% noise reduction rate** and delivering a pristine dataset optimized for Machine Learning.
-
-### 🔹 Milestone 2: Data Anonymization & Dual Ingestion Simulation
-Generated 150 synthetic records in Python (`Faker pt_BR`) with intentional null-value injection to stress-test the predictive pipeline while avoiding exposure of Personally Identifiable Information (PII), ensuring strict LGPD and GDPR compliance. The script simulates both the "Ingestion Event" (lead creation) and the "Evaluation Event" (Classroom submission) sharing matching emails to validate primary key reconciliation and state machine resilience.
-
-### 🔹 Milestone 3: Enterprise Base Environments Provisioning
-Deployed the Sandbox environment in HubSpot with mapped custom properties (*Acquisition Source, ML Confidence Score*). Provisioned the Google Cloud Platform project under the 100% Free Tier, configuring Cloud Firestore and activating Pub/Sub topics for asynchronous event handling.
-
-### 🔹 Milestone 4: Data Warehouse Migration to BigQuery
-Replaced legacy spreadsheet silos with BigQuery as an elastic columnar analytical engine, standardizing geographical data mappings via serverless SQL queries.
-
-### 🔹 Milestone 5: Dual Ingestion & Serverless State Machine (Core MLOps V9)
-Packaged the Machine Learning model (`model.pkl`) into an HTTP Google Cloud Function (Python 3.10). Configured lead ingestion endpoints in Cloud Firestore and Pub/Sub event topics for Google Classroom, converting Firestore into a $0.00 USD State Machine that consolidates complete profile records by email.
-
-### 🔹 Milestone 6: Event-Driven Smart Orchestration with Make
-Built the master scenario in Make with conditional routing (*Router*). The orchestrator no longer manages raw state logic; it receives a single purified HTTP payload from GCP upon cycle completion, syncing data into **HubSpot CRM** and **BigQuery** via Gemini 2.5 Flash while minimizing operational consumption.
-
-### 🔹 Milestone 7: Governance & Business Dashboards (Looker Studio)
-Established native connections to BigQuery and HubSpot CRM to visualize infrastructure health, marketing channel attribution, and AI model performance metrics (*Confidence Scores*) in real time.
-
-### 🔹 Milestone 8: Impact Documentation & Storytelling (README)
-Published the master case study using the STAR framework (*Situation, Task, Action, Result*), focusing on ROI, FinOps strategies, and technical debt elimination for the final GitHub video presentation.
+### 🔹 3.2 Automating the Future: Agentic AI & Real-Time Evaluation
+For new candidate evaluations, I designed a Generative AI hub:
+* **Decoupled Business Logic:** When a candidate submits an exam, Make retrieves the evaluation master prompt dynamically from **Google Docs** (ensuring security and decoupled governance).
+* **Gemini Enterprise Agent:** The payload is sent to **Gemini 2.5 Flash**, which conducts a qualitative evaluation of the answers.
+* **JSON Structuring:** The AI outputs a structured JSON response, seamlessly updating the existing contact record in **HubSpot CRM** and logging the event in **Google BigQuery**[cite: 1].
 
 ---
 
-## 📁 Repository Structure
+## 🛡️ 4. Governance, Data Privacy (GDPR/LGPD) & FinOps
 
+* **Privacy by Design:** Engineered a 3-Layer SQL Pipeline (Staging ➔ Transformation ➔ Target) that applied Geofencing to isolate the target market. This minimized data exposure by **92%**[cite: 1].
+* **Synthetic Stress Testing:** To avoid exposing Personally Identifiable Information (PII) during staging, the pipeline was stress-tested using 150 synthetic records generated in Python (`Faker pt_BR`)[cite: 1].
+* **Responsible AI:** Every AI decision logs its `ML Confidence Score` into BigQuery to guarantee full auditability[cite: 1].
+* **FinOps Mastery:** By leveraging GCP's free tier for heavy lifting and restricting Make to purified event routing, the entire dual ecosystem operates at **$0.00 USD**[cite: 1].
+
+---
+
+## 📁 5. Repository Structure
 ```text
 crm-data-pipeline-evolution/
-├── v1-mvp-staging/
-│   ├── apps_script_code.js         # Legacy Google Apps Script (MVP)
-│   ├── generate_fake_data.py       # Dual Ingestion Synthetic Data Generator (Faker)
-│   ├── students_synthetic_input.csv# Anonymized synthetic dataset (LGPD compliant)
-│   └── zoho_analytics_dedup.sql    # 3-Layer SQL Pipeline with Geofencing (Brazil target)
-├── v2-enterprise-target/
+├── v1-data-engineering/
+│   ├── generate_fake_data.py       # PII-Free Synthetic Data Generator (Faker pt_BR)
+│   ├── multi_tier_sql_dedup.sql    # 3-Layer SQL Pipeline (147k -> 11.6k records)
+│   └── ml_model_training.ipynb     # Colab Notebook (Model training for Social Media Origin)
+├── v2-dual-ai-architecture/
 │   ├── cloud-functions/
-│   │   ├── main.py                 # Serverless MLOps inference endpoint
-│   │   ├── model.pkl               # Trained ML Model (Scikit-Learn)
-│   │   ├── model_columns.pkl       # Column mapping metadata
+│   │   ├── main.py                 # Serverless MLOps endpoint for legacy prediction
+│   │   ├── model.pkl               # Trained Scikit-Learn Model
 │   │   └── requirements.txt        # Python dependencies
-│   ├── bigquery-sql/
-│   │   └── census_mapping.sql      # Geographical normalization queries
-│   └── make-scenarios/
-│       ├── integration_webhooks.json # Scenario 1: Predictive Router
-│       └── hub_maestro_agentic.json  # Scenario 2: Agentic Vertex AI Pipeline
-├── .gitignore                      # Security exclusion rules
-└── README.md                       # Master Repository Documentation
+│   ├── make-scenarios/
+│   │   ├── integration_webhooks.json # Scenario 1: MLOps Router (Happy Path vs AI Path)
+│   │   └── hub_maestro_agentic.json  # Scenario 2: Gemini Exam Evaluator
+│   └── bigquery-sql/
+│       └── audit_logging.sql       # AI Confidence Score tracking
+└── README.md                       # Master Documentation

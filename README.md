@@ -17,56 +17,64 @@
 
 | Strategic Dimension | Real Volume / Impact |
 | :--- | :--- |
-| **Raw Legacy Volume Processed** | 147,604 records cleaned from the legacy system[cite: 1]. |
-| **Data Minimization (GDPR/LGPD)** | 11,600 unique entities recovered (~92% noise reduction)[cite: 1]. |
-| **Dual AI Architecture** | **MLOps:** Social Media origin prediction. **GenAI:** Exam evaluation. |
-| **Structural Operating Cost** | **$0.00 USD** (GCP Serverless + Make Smart Routing)[cite: 1]. |
+| **Legacy Migration Volume** | 147,604 raw records cleaned from the manual system. |
+| **ETL Efficiency & Minimization** | 11,600 historical entities rescued (~92% noise reduction). |
+| **Dual AI Architecture** | **Predictive (Scikit-Learn):** Social Media origin attribution. <br> **Generative (Gemini):** Real-time exam evaluation. |
+| **Governance & Privacy** | Total anonymization (Faker), strict GDPR / LGPD compliance. |
+| **FinOps & Orchestration** | Smart routing via Make & GCP at **$0.00 USD operating cost**. |
 
 ---
 
-## 🎯 2. The Business Challenge: Migration & Automation
-This repository documents the architectural evolution of a RevOps ecosystem that previously collapsed under the weight of **147,604 raw records**. 
+## 🎯 2. The Business Challenge: The Past and The Future
+This repository documents the architectural evolution of a RevOps ecosystem that collapsed under the weight of **147,604 raw records**. 
 
-The business required a two-front solution:
-1. **The Past (Legacy Migration):** Migrate 11,600 historical records to a new CRM (HubSpot)[cite: 1]. However, these records lacked critical marketing attribution data (Social Media Origin).
-2. **The Future (New Leads):** Automate the qualitative evaluation of new candidates taking admission exams in Google Classroom.
+As a Technical Product Owner, I designed an event-driven **Dual AI Architecture** to solve two critical business fronts while eliminating technical debt:
 
-Under **Six Sigma** and **Privacy by Design** principles, I architected a **Dual AI Event-Driven System** to solve both challenges at $0.00 infrastructure cost[cite: 1].
-
----
-
-## 🧠 3. Dual AI Architecture: MLOps & Generative AI
-
-### 🔹 3.1 Resolving the Past: MLOps Router & Legacy Migration
-To rescue the historical data attribution, I engineered a Predictive AI workflow:
-* **MLOps Training:** Trained a classification model (`Scikit-Learn`) in **Google Colab** using the clean dataset to predict missing Social Media channels.
-* **Serverless GCP:** Packaged the `.pkl` artifacts into a **Google Cloud Function** (Python 3.10)[cite: 1].
-* **Make Smart Router:** Configured a webhook router. If a legacy record is complete, it takes the **"Happy Path"** to the CRM. If the Social Media origin is missing, it takes the **"AI Path"**, triggering the GCP microservice to predict the channel in <2s before injecting the enriched profile into HubSpot.
-
-### 🔹 3.2 Automating the Future: Agentic AI & Real-Time Evaluation
-For new candidate evaluations, I designed a Generative AI hub:
-* **Decoupled Business Logic:** When a candidate submits an exam, Make retrieves the evaluation master prompt dynamically from **Google Docs** (ensuring security and decoupled governance).
-* **Gemini Enterprise Agent:** The payload is sent to **Gemini 2.5 Flash**, which conducts a qualitative evaluation of the answers.
-* **JSON Structuring:** The AI outputs a structured JSON response, seamlessly updating the existing contact record in **HubSpot CRM** and logging the event in **Google BigQuery**[cite: 1].
+1. **The Past (Legacy Migration):** Migrate 11,600 historical records to a new CRM (HubSpot). These records suffered from severe data gaps, specifically missing **Social Media Origin (RRSS)**, which destroyed marketing attribution.
+2. **The Future (New Leads):** Automate the qualitative evaluation of new candidates taking admission exams in Google Classroom, replacing a slow, manual process disconnected from the CRM.
 
 ---
 
-## 🛡️ 4. Governance, Data Privacy (GDPR/LGPD) & FinOps
-
-* **Privacy by Design:** Engineered a 3-Layer SQL Pipeline (Staging ➔ Transformation ➔ Target) that applied Geofencing to isolate the target market. This minimized data exposure by **92%**[cite: 1].
-* **Synthetic Stress Testing:** To avoid exposing Personally Identifiable Information (PII) during staging, the pipeline was stress-tested using 150 synthetic records generated in Python (`Faker pt_BR`)[cite: 1].
-* **Responsible AI:** Every AI decision logs its `ML Confidence Score` into BigQuery to guarantee full auditability[cite: 1].
-* **FinOps Mastery:** By leveraging GCP's free tier for heavy lifting and restricting Make to purified event routing, the entire dual ecosystem operates at **$0.00 USD**[cite: 1].
+## 🛠️ 3. Data Engineering & Privacy by Design (GDPR/LGPD)
+* **SQL Funnel Pipeline:** Designed a 3-tier ETL engine (Staging ➔ Transformation ➔ Target) to clean and prepare the massive migration.
+* **Geofencing & Data Minimization:** Applied strict GDPR/LGPD data minimization principles using regional logic to isolate the target market (Brazil) and discard out-of-scope data.
+* **The Result:** Compressed 147,604 rows into **11,600 unique, validated historical entities**. This ~92% noise reduction drastically lowered the legal risk surface.
 
 ---
 
-## 📁 5. Repository Structure
+## 🧠 4. Dual AI Architecture
+
+### 🔹 4.1 Predictive AI (Rescuing the Past)
+To recover the missing marketing attribution of legacy records:
+* **MLOps Training:** Trained a classification model (`Scikit-Learn`) in **Google Colab** capable of predicting the missing Social Media channel. Exported the artifacts (`model.pkl`) into a **Google Cloud Function** (Python 3.10) running at $0.00 USD cost.
+* **Scenario 1 - Make (MLOps Router):** Orchestrated the migration using smart routing.
+  * **"Happy Path":** If the legacy record was complete, it routed directly to HubSpot and BigQuery.
+  * **"AI Path":** If the Social Media origin was missing, Make executed an HTTP request to the Cloud Function, predicting the data in milliseconds before injecting the enriched profile into the CRM.
+
+### 🤖 4.2 Generative AI (Automating the Future)
+For new candidate evaluations, I designed a real-time agentic ecosystem:
+* **Scenario 2 - Make (Agentic Master Hub):** 
+  1. Captures the exam event via a purified webhook.
+  2. Dynamically extracts the master evaluation prompt from **Google Docs**, intelligently decoupling business logic from the integration flow.
+  3. Sends the prompt and answers to **Gemini 2.5 Flash / Vertex AI**.
+  4. The AI outputs a structured qualitative evaluation (JSON Parser), updating the existing contact record in **HubSpot CRM** and streaming logs to **BigQuery**.
+
+---
+
+## ⚡ 5. FinOps, Governance & Privacy
+* **FinOps Mastery:** By using GCP for the heavy lifting and Make exclusively to react to webhooks and route data, the entire infrastructure (MLOps and GenAI) operates at a **$0.00 USD structural cost**.
+* **Responsible AI & Traceability:** Every model prediction and Gemini evaluation logs its respective `Confidence Score` directly into **Google BigQuery** and HubSpot, enabling real-time auditing.
+* **PII Isolation:** The entire pipeline was initially stress-tested using synthetic data generated in Python (`Faker pt_BR`) to guarantee zero exposure of Personally Identifiable Information during development.
+
+---
+
+## 📁 6. Repository Structure
 ```text
 crm-data-pipeline-evolution/
-├── v1-data-engineering/
+├── v1-data-engineering-and-training/
 │   ├── generate_fake_data.py       # PII-Free Synthetic Data Generator (Faker pt_BR)
 │   ├── multi_tier_sql_dedup.sql    # 3-Layer SQL Pipeline (147k -> 11.6k records)
-│   └── ml_model_training.ipynb     # Colab Notebook (Model training for Social Media Origin)
+│   └── ml_model_training.ipynb     # Colab Notebook (Scikit-Learn training for RRSS attribution)
 ├── v2-dual-ai-architecture/
 │   ├── cloud-functions/
 │   │   ├── main.py                 # Serverless MLOps endpoint for legacy prediction
@@ -74,7 +82,7 @@ crm-data-pipeline-evolution/
 │   │   └── requirements.txt        # Python dependencies
 │   ├── make-scenarios/
 │   │   ├── integration_webhooks.json # Scenario 1: MLOps Router (Happy Path vs AI Path)
-│   │   └── hub_maestro_agentic.json  # Scenario 2: Gemini Exam Evaluator
+│   │   └── hub_maestro_agentic.json  # Scenario 2: Gemini Agentic Evaluator
 │   └── bigquery-sql/
 │       └── audit_logging.sql       # AI Confidence Score tracking
 └── README.md                       # Master Documentation

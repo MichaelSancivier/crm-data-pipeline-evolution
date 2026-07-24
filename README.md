@@ -69,20 +69,19 @@ For new candidate evaluations, I designed a real-time agentic ecosystem:
 ---
 
 ## 📁 6. Repository Structure
+
 ```text
 crm-data-pipeline-evolution/
-├── v1-data-engineering-and-training/
-│   ├── generate_fake_data.py       # PII-Free Synthetic Data Generator (Faker pt_BR)
-│   ├── multi_tier_sql_dedup.sql    # 3-Layer SQL Pipeline (147k -> 11.6k records)
-│   └── ml_model_training.ipynb     # Colab Notebook (Scikit-Learn training for RRSS attribution)
-├── v2-dual-ai-architecture/
-│   ├── cloud-functions/
-│   │   ├── main.py                 # Serverless MLOps endpoint for legacy prediction
-│   │   ├── model.pkl               # Trained Scikit-Learn Model
-│   │   └── requirements.txt        # Python dependencies
-│   ├── make-scenarios/
-│   │   ├── integration_webhooks.json # Scenario 1: MLOps Router (Happy Path vs AI Path)
-│   │   └── hub_maestro_agentic.json  # Scenario 2: Gemini Agentic Evaluator
-│   └── bigquery-sql/
-│       └── audit_logging.sql       # AI Confidence Score tracking
+├── v1-mvp-staging/                 # Phase 1: Data Engineering & Training
+│   ├── apps_script_code.js         # Legacy Google Apps Script
+│   ├── generate_fake_data.py       # PII-Free Synthetic Data Generator
+│   ├── students_synthetic_input.csv# Anonymized dataset sample
+│   └── multi_tier_sql_dedup.sql    # 3-Layer SQL Pipeline (147k -> 11.6k records)
+├── v2-enterprise-target/           # Phase 2: Dual AI Architecture
+│   └── cloud-functions/            
+│       ├── main.py                 # Serverless MLOps endpoint for legacy prediction
+│       ├── model.pkl               # Trained Scikit-Learn Model
+│       ├── model_columns.pkl       # Column mapping metadata
+│       └── requirements.txt        # Python dependencies
+├── .gitignore                      # Security exclusion rules
 └── README.md                       # Master Documentation
